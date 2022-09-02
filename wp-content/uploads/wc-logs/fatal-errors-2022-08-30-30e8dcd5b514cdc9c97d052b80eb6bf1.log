@@ -1,0 +1,33 @@
+2022-08-30T15:34:01+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\mailpoet\vendor\woocommerce\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:390
+Stack trace:
+#0 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\mailpoet\vendor\woocommerce\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(346): ActionScheduler_DBStore->claim_actions(0, 25, NULL, Array, '')
+#1 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\mailpoet\vendor\woocommerce\action-scheduler\classes\ActionScheduler_QueueRunner.php(67): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\mailpoet\vendor\woocommerce\action-scheduler\classes\ActionScheduler_QueueRunner.php(59): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp\htdocs\monsite Ecommerce\wp-includes\class-wp-hook.php(307): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp\htdocs\monsite Ecommerce\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\monsite Ecommerce\wp-includes\plugin.php(524): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\monsite Ecommerce\wp-cron.php(138): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown dans C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\mailpoet\vendor\woocommerce\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php à la ligne 390
+
+2022-08-30T16:22:58+00:00 CRITICAL Uncaught Exception: Invalid post. in C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\elementor\core\settings\page\manager.php:101
+Stack trace:
+#0 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\elementor\core\base\document.php(1612): Elementor\Core\Settings\Page\Manager->ajax_before_save_settings(Array, NULL)
+#1 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\elementor\core\base\document.php(789): Elementor\Core\Base\Document->save_settings(Array)
+#2 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\elementor\core\kits\manager.php(262): Elementor\Core\Base\Document->update_settings(Array)
+#3 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\elementor\core\kits\manager.php(420): Elementor\Core\Kits\Manager->update_kit_settings_based_on_option('site_name', 'caftan marocain...')
+#4 C:\xampp\htdocs\monsite Ecommerce\wp-includes\class-wp-hook.php(309): Elementor\Core\Kits\Manager->Elementor\Core\Kits\{closure}('Ecommerce', 'caftan marocain...')
+#5 C:\xampp\htdocs\monsite Ecommerce\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#6 C:\xampp\htdocs\monsite Ecommerce\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#7 C:\xampp\htdocs\monsite Ecommerce\wp-includes\option.php(530): do_action('update_option_b...', 'Ecommerce', 'caftan marocain...', 'blogname')
+#8 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\envothemes-demo-import\includes\wizard\wizard.php(592): update_option('blogname', 'caftan marocain...')
+#9 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\envothemes-demo-import\includes\wizard\wizard.php(490): EnvoThemes_Demo_Import_Theme_Wizard->save_envo_customize()
+#10 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\envothemes-demo-import\includes\wizard\wizard.php(295): EnvoThemes_Demo_Import_Theme_Wizard->envo_customize_setup(Object(EnvoThemes_Demo_Import_Theme_Wizard))
+#11 C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\envothemes-demo-import\includes\wizard\wizard.php(247): EnvoThemes_Demo_Import_Theme_Wizard->setup_wizard_content()
+#12 C:\xampp\htdocs\monsite Ecommerce\wp-includes\class-wp-hook.php(307): EnvoThemes_Demo_Import_Theme_Wizard->envo_wizard_setup('')
+#13 C:\xampp\htdocs\monsite Ecommerce\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#14 C:\xampp\htdocs\monsite Ecommerce\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#15 C:\xampp\htdocs\monsite Ecommerce\wp-admin\admin.php(175): do_action('admin_init')
+#16 {main}
+  thrown dans C:\xampp\htdocs\monsite Ecommerce\wp-content\plugins\elementor\core\settings\page\manager.php à la ligne 101
+
